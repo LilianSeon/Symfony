@@ -16,3 +16,6 @@ long:
 cours:
     path: /cours
     controller: App\Controller\CoursController::index
+lang:
+    path: /lang
+    controller: App\Controller\LangController::index
