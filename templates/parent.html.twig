@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>
+        Apprendre une Langue
+    </title>
+</head>
+<body>
+{#
+    Instruction twig de mise en page
+        block: zone définie à remplir ou pas dans une page enfant
+        include : inclusion de fichiers twig
+    fonction
+        parent() : récupérer le contenu du bloc parent
+
+{% include 'inc/nav.html.twig' %}
+#}
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="/">Appendre une langue</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/sejour">Séjour</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/info">Demande d'info</a>
+  </li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <a class="navbar-brand" href="/">Home</a>
+  <a class="navbar-link" href="/mention">Mention</a>
+  <a class="navbar-link" href="/sejour">Séjour</a>
+  <a class="navbar-link" href="/info">Demande d'info</a>
+</nav>
+</body>
+</html>
